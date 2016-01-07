@@ -30,6 +30,7 @@ ratings:
     - lib/**
     - '**.rb'
     - '**.go'
+    - "**.coffee"
 exclude_paths:
   - vendor/**/*
   - db/**/*
