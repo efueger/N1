@@ -1,33 +1,46 @@
 engines:
-  csslint:
+  rubocop:
     enabled: false
   coffeelint:
     enabled: true
+  fixme:
+    enabled: false
+  eslint:
+    enabled: false
+  csslint:
+    enabled: false
+  scss-lint:
+    enabled: false
+  brakeman:
+    enabled: false
+  bundler-audit:
+    enabled: false
   duplication:
     enabled: false
     config:
       languages:
-      - ruby
-      - javascript
-      - python
-      - php
-  eslint:
-    enabled: false
-  fixme:
-    enabled: false
-  radon:
+        - ruby
+        - javascript
+
+  foodcritic:
     enabled: false
 ratings:
   paths:
-#  - "**.css"
-  - "**.coffee"
-  # - "**.inc"
-  # - "**.js"
-  # - "**.jsx"
-  # - "**.module"
-  # - "**.php"
-  # - "**.py"
-  # - "**.rb"
+    - app/**
+    - lib/**
+    - '**.rb'
+    - '**.go'
 exclude_paths:
-- script/**/*
-- spec/**/*
+  - vendor/**/*
+  - db/**/*
+  - app/assets/fonts/**/*
+  - public/**/*
+  - bin/**/*
+  - '**.jpg'
+  - '**.wsdl'
+  - '**.svg'
+  - '**.png'
+  - '**.gif'
+  - '**.yml'
+  - 'Gemfile'
+  - 'Gemfile.lock'
